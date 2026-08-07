@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+.header {
+    padding: 20px;
+    padding-right: 60px;
+    background: #1ABC9C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul,
+.socials ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.socials img {
+    width: auto;
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about img,
+.about .text {
+    flex: 1;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 62px;
+    padding-right: 30px;
+}
+
+.text p {
+    padding: 40px 0;
+    text-align: justify;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+    background: #E6FFF0;
+    padding-top: 124px;
+    padding-bottom: 126px;
+    padding-left: 64px;
+    padding-right: 65px;
+}
+
+.projects h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.projects ul {
+    display: flex;
+    gap: 37px;
+    list-style: none;
+}
+
+.projects ul li {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects ul li img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.38);
+    padding: 28px 36px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects ul li:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.card-overlay p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer {
+    width: 100%;
+    padding: 20px 69px;
+    margin-top: 84px;
+    margin-bottom: 55px;
+}
+
+.contacts {
+    text-align: left;
+    font-weight: 400;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 55px;
+}
+
+.contacts-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-item img {
+    height: 48px;
+    width: auto;
+}
+
+.label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #999999;
+}
+
+.value {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+
+.email {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #F7654A;
+}
