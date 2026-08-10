@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 2px;
+}
+
+a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #444;
+    text-decoration: none;
+}
+.submenu a {
+    background: #333;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    white-space: nowrap;
+    list-style: none;
+}
+
+.menu-item:hover .submenu {
+
+    display: block;
+}
+a:hover {
+    background: #555;
+}
