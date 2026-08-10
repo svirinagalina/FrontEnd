@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* скрываем нативный input, оставляя его доступным */
+.radio-group input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-group label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 34px;
+    font-size: 22px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* внешний круг */
+.radio-group label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    border: 2px solid #c9c9c9;
+    border-radius: 50%;
+    background: #fff;
+    transition: border-color 0.2s ease;
+}
+
+.radio-group label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #46c11b;
+    transition: transform 0.15s ease;
+}
+
+.radio-group input[type="radio"]:checked + label::before {
+    border-color: #46c11b;
+}
+
+.radio-group input[type="radio"]:checked + label::after {
+    transform: translateY(-50%) scale(1);
+}
+
+.radio-group label:hover::before {
+    border-color: #46c11b;
+}
+
+.radio-group input[type="radio"]:focus-visible + label::before {
+    box-shadow: 0 0 0 3px rgba(70, 193, 27, 0.25);
+}
